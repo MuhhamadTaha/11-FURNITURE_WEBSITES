@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="link.css" />
+    <title>LoFt</title>
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo-section">
+        <a href="index.html"
+          ><img src="LOFT.png" alt="logo" id="header-img" class="logo-sec"
+        /></a>
+      </div>
+      <nav id="nav-bar" class="navigation-bar">
+        <ul style="list-style-type: none" class="navigation">
+          <li><a href="index.html" class="nav-link">LOFT</a></li>
+          <li><a href="vid.html" class="nav-link">CATELOGUE</a></li>
+          <li><a href="contact.html" class="nav-link">CONTACT US</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="designs" class="samples">
+      <div class="section-text">
+        <h2>FEATURED</h2>
+        <p>
+          Take A Look On Some Of Our Featured Picks That Have Made Editorial
+          Debuts
+        </p>
+      </div>
+      <div class="featured">
+        <div class="work">
+          <figure>
+            <img src="pexels-houzlook-com-3356416.jpg" alt="" />
+            <figcaption>
+              <a href="#">Dining Table</a>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="work">
+          <figure>
+            <img src="pexels-vecislavas-popa-1571458.jpg" alt="" />
+            <figcaption>
+              <a href="#">Living Room</a>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="work">
+          <figure>
+            <img src="pexels-max-vakhtbovych-6207818.jpg" alt="" />
+            <figcaption>
+              <a href="#">BathRoom</a>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="work">
+          <figure>
+            <img src="pexels-yugantar-sambhangphe-4034203.jpg" alt="" />
+            <figcaption>
+              <a href="#">Study Table</a>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="work">
+          <figure>
+            <img src="pexels-antonio-borriello-1297611.jpg" alt="" />
+            <figcaption>
+              <a href="#">Work Area</a>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="work">
+          <figure>
+            <img src="pexels-tan-danh-1329711.jpg" alt="" />
+            <figcaption>
+              <a href="#">Theme Bedroom</a>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="popup-image">
+          <span>&times;</span>
+          <img src="pexels-houzlook-com-3356416.jpg" />
+        </div>
+      </div>
+    </section>
+    <script>
+      document.querySelectorAll(".work img").forEach((image) => {
+        image.onclick = () => {
+          document.querySelector(".popup-image").style.display = "block";
+          document.querySelector(".popup-image img").src =
+            image.getAttribute("src");
+        };
+      });
+      document.querySelector(".popup-image span").onclick = () => {
+        document.querySelector(".popup-image").style.display = "none";
+      };
+    </script>
+  </body>
+</html>
